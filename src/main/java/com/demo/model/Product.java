@@ -39,10 +39,10 @@ public class Product implements Serializable {
     private Boolean isDeleted = false;
 
     @Column
-    private Long shopeeID;
+    private String shopeeID;
 
     @Column
-    private Long shopeeShopID;
+    private String shopeeShopID;
 
     @Column
     private String brand;
@@ -54,10 +54,10 @@ public class Product implements Serializable {
     private String UUID;
 
     @Column
-    private Long currentPrice;
+    private Double currentPrice;
 
     @Column
-    private Long lowestPrice;
+    private Double lowestPrice;
 
 
     // Methods
@@ -83,11 +83,11 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public Long getShopeeID() {
+    public String getShopeeID() {
         return shopeeID;
     }
 
-    public void setShopeeID(Long shopeeID) {
+    public void setShopeeID(String shopeeID) {
         this.shopeeID = shopeeID;
     }
 
@@ -99,19 +99,19 @@ public class Product implements Serializable {
         return isDeleted;
     }
 
-    public long getCurrentPrice() {
+    public Double getCurrentPrice() {
         return currentPrice;
     }
 
-    public void setCurrentPrice(Long currentPrice) {
+    public void setCurrentPrice(Double currentPrice) {
         this.currentPrice = currentPrice;
     }
 
-    public Long getLowestPrice() {
+    public Double getLowestPrice() {
         return lowestPrice;
     }
 
-    public void setLowestPrice(Long lowestPrice) {
+    public void setLowestPrice(Double lowestPrice) {
         this.lowestPrice = lowestPrice;
     }
 
@@ -123,11 +123,11 @@ public class Product implements Serializable {
         this.UUID = UUID;
     }
 
-    public Long getShopeeShopID() {
+    public String getShopeeShopID() {
         return shopeeShopID;
     }
 
-    public void setShopeeShopID(Long shopeeShopID) {
+    public void setShopeeShopID(String shopeeShopID) {
         this.shopeeShopID = shopeeShopID;
     }
 

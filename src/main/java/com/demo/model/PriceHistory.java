@@ -15,7 +15,7 @@ public class PriceHistory implements Serializable {
     public Long id;
 
     @Column
-    public Long price;
+    public Double price;
 
     @Temporal(value = TemporalType.TIMESTAMP)
     public java.util.Date date;
@@ -32,11 +32,11 @@ public class PriceHistory implements Serializable {
         this.id = id;
     }
 
-    public Long getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

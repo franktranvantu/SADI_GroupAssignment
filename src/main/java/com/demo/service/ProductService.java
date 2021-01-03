@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import com.demo.model.PriceHistory;
 import com.demo.model.Product;
 import com.demo.repository.ProductStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class ProductService {
     private Product setNewLowestPrice(Product product) {
         if (!product.getHistories().isEmpty()) {
             //Find min price in the History array, and set new Lowest Price
-            Long min = Collections.min(product.getHistories(), (history, t1) -> (int) (history.getPrice() - t1.getPrice())).getPrice();
+            Double min = product.getHistories().stream().mapToDouble(PriceHistory::getPrice).min().orElseThrow(NoSuchElementException::new);
             product.setLowestPrice(Optional.ofNullable(product.getLowestPrice()).filter(lowest -> lowest < min).orElse(min));
         }
         else {
