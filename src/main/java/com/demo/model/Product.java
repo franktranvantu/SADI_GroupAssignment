@@ -196,6 +196,21 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return (String.format("Product: [name - %s,\ndescription: %s, \nURL: %s", name, description, url));
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", histories=" + histories +
+                ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
+                ", isHidden=" + isHidden +
+                ", isDeleted=" + isDeleted +
+                ", shopeeID='" + shopeeID + '\'' +
+                ", shopeeShopID='" + shopeeShopID + '\'' +
+                ", brand='" + brand + '\'' +
+                ", type='" + type + '\'' +
+                ", UUID='" + UUID + '\'' +
+                ", currentPrice=" + currentPrice +
+                ", lowestPrice=" + lowestPrice +
+                '}';
     }
 }

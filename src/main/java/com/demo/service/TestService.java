@@ -11,7 +11,7 @@ public class TestService {
     @Autowired
     public ProductService productService;
 
-    @DataSource(DataSourceType.MASTER)
+    @DataSource(DataSourceType.SLAVE)
     public String save() {
         System.out.println("========save======");
         productService.delete(1L);
